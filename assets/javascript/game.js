@@ -26,20 +26,20 @@ console.log(crystal3);
 console.log(crystal4);
 
 //needs reset random # function
-//function resetGame() {
-//    console.log('reset game is running');
-//    correctNumber = 0;
-//    crystal1 = 0;
-//    crystal2 = 0;
-//    crystal3 = 0;
-//    crystal4 = 0;
-//    correctNumber = Math.floor((Math.random() * 101) + 19);
-//    crystal1 = Math.floor((Math.random() * 12) + 1);
-//    crystal2 = Math.floor((Math.random() * 12) + 1);
-//    crystal3 = Math.floor((Math.random() * 12) + 1);
-//    crystal4 = Math.floor((Math.random() * 12) + 1);
-//    $('h1:nth-of-type(2)').html('You have: ' + counter + ' Crystals');
-//}
+function resetGame() {
+    console.log('reset game is running');
+    correctNumber = 0;
+    crystal1 = 0;
+    crystal2 = 0;
+    crystal3 = 0;
+    crystal4 = 0;
+    correctNumber = Math.floor((Math.random() * 101) + 19);
+    crystal1 = Math.floor((Math.random() * 12) + 1);
+    crystal2 = Math.floor((Math.random() * 12) + 1);
+    crystal3 = Math.floor((Math.random() * 12) + 1);
+    crystal4 = Math.floor((Math.random() * 12) + 1);
+    $('h1:nth-of-type(2)').html('You have: ' + counter + ' Crystals');
+}
 
 
 
@@ -82,11 +82,11 @@ $('body').on('click', function() {
 if ( parseFloat(counter) === parseFloat(correctNumber)) {
     console.log('you have won');
     $('h1:nth-of-type(2)').html('You have won');
-    let newGame =true;
+    setTimeout(resetGame, 2500);
 }   else if ( parseFloat(counter) > parseFloat(correctNumber)) {
     console.log('lost');
     $('h1:nth-of-type(2)').html('Take this "L", it is dangerous to go alone');
-    let newGame =true;
+    setTimeout(resetGame, 2500);
 };
 
 
