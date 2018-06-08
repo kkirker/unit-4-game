@@ -63,3 +63,20 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
+@media (max-width: 500px) {
+    body {
+        max-height: 100vh;
+    }
+
+    .crystal-container {
+        width: 75vw;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transform: translate(50% 50%);
+        margin: auto;
+    }
+}

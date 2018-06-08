@@ -8,6 +8,7 @@ function firstGame() {
 setTimeout(firstGame, 250);
 
 //define global variables here
+
 let correctNumber = Math.floor((Math.random() * 101) + 19);
 //random number for correct is 19-120, so range is 101 numbers starting at 19.
 let crystal1 = Math.floor((Math.random() * 12) + 1);
@@ -25,24 +26,24 @@ console.log(crystal3);
 console.log(crystal4);
 
 //needs reset random # function
-function resetGame() {
-    console.log('reset game is running');
-    correctNumber = 0;
-    crystal1 = 0;
-    crystal2 = 0;
-    crystal3 = 0;
-    crystal4 = 0;
-    correctNumber = Math.floor((Math.random() * 101) + 19);
-    crystal1 = Math.floor((Math.random() * 12) + 1);
-    crystal2 = Math.floor((Math.random() * 12) + 1);
-    crystal3 = Math.floor((Math.random() * 12) + 1);
-    crystal4 = Math.floor((Math.random() * 12) + 1);
-    $('h1:nth-of-type(2)').html('You have: ' + counter + ' Crystals');
-}
+//function resetGame() {
+//    console.log('reset game is running');
+//    correctNumber = 0;
+//    crystal1 = 0;
+//    crystal2 = 0;
+//    crystal3 = 0;
+//    crystal4 = 0;
+//    correctNumber = Math.floor((Math.random() * 101) + 19);
+//    crystal1 = Math.floor((Math.random() * 12) + 1);
+//    crystal2 = Math.floor((Math.random() * 12) + 1);
+//    crystal3 = Math.floor((Math.random() * 12) + 1);
+//    crystal4 = Math.floor((Math.random() * 12) + 1);
+//    $('h1:nth-of-type(2)').html('You have: ' + counter + ' Crystals');
+//}
 
 
 
-//this function will assign random numbers for the correct-number, and each crystal for the game to use.
+
 
 
 
@@ -75,7 +76,7 @@ $("#crystal4").on('click', function() {
     $("#counter").text(counter);
 });
 
-console.log(`parseFloat: ${parseFloat(counter)}`);
+//console.log(`parseFloat: ${parseFloat(counter)}`);
 
 $('body').on('click', function() {
 if ( parseFloat(counter) === parseFloat(correctNumber)) {
@@ -88,9 +89,6 @@ if ( parseFloat(counter) === parseFloat(correctNumber)) {
     let newGame =true;
 };
 
-if (newGame === true) {
-    setTimeout(resetGame, 3000);
-};
 
 }) ;
 
