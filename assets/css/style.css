@@ -14,8 +14,8 @@ body {
 }
 
 .crystal-container {
-    width: 75vw;
-    height: 75vh;
+    max-width: 75vw;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,6 +64,20 @@ img {
     max-height: 100%;
 }
 
+#won {
+    text-align: center;
+    color: cornsilk;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#lost {
+    text-align: center;
+    color: cornsilk;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 @media (max-width: 500px) {
     body {
         max-height: 100vh;
@@ -80,3 +94,4 @@ img {
         margin: auto;
     }
 }
+
